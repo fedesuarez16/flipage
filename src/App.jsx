@@ -1,33 +1,28 @@
-import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Catalog from './Catalog';
+import Blanda from './components/Blanda';
+import Semidura from './components/Semidura';
+import Dura from './components/Dura';
+import Techos from './components/Techos';
 
 const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
+  <Router>
+    <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/catalogo" element={<Catalog />} />
+    <Route path="/blanda" element={<Catalog />} />
+    <Route path="/semiduras" element={<Semidura />} />
+    <Route path="/duras" element={<Dura />} />
+    <Route path="/techos" element={<Techos />} />
 
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
-    
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Business />
-        <Billing />
-        <CardDeal />
-        <Testimonials />
-        <Clients />
-        <CTA />
-        <Footer />
-      </div>
-    </div>
-  </div>
+
+
+
+
+    </Routes>
+  </Router>
 );
 
 export default App;

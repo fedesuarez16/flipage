@@ -1,70 +1,67 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, icon, iconn2, iconn3  } from "../assets";
 
 export const navLinks = [
   {
     id: "home",
-    title: "Home",
+    title: "Inicio",
   },
   {
     id: "features",
-    title: "Features",
+    title: "Nosotros",
   },
   {
     id: "product",
-    title: "Product",
+    title: "Catálogo",
   },
   {
-    id: "clients",
-    title: "Clients",
+    id: "contact",
+    title: "Contacto",
   },
 ];
 
 export const features = [
   {
     id: "feature-1",
-    icon: star,
-    title: "Rewards",
+    icon: icon,
+    title: "Ventas por Mayor",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Ofrecemos venta de maderas al por mayor, brindándote la mejor selección para construir tus ideas con solidez y estilo. ",
   },
   {
     id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
+    icon: iconn2,
+    title: "Ventas por menor",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "Desde tablas hasta detalles finos, tenemos la madera perfecta para cada idea.",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
+    icon: iconn3,
+    title: "Envios a Domicilio",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Transforma tus proyectos con la belleza natural de nuestras maderas. ¡Venta de maderas de calidad con envío directo a tu puerta! ",
   },
 ];
 
 export const feedback = [
   {
     id: "feedback-1",
-    content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
+    content:" En nuestro aserradero, cada pieza es cuidadosamente seleccionada y tratada para ofrecerte productos que resisten el paso del tiempo. Tu proyecto merece lo mejor, y nosotros nos aseguramos de que lo obtengas.",
+    name: "1.Calidad ",
     title: "Founder & Leader",
     img: people01,
   },
   {
     id: "feedback-2",
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
+    content: "No solo cortamos madera; construimos relaciones duraderas contigo. Estamos para entender tus necesidades y ayudarte a encontrar las soluciones perfectas. La atención  es nuestro compromiso, porque cada cliente es único.",
+    name: "2.Atención",
     title: "Founder & Leader",
     img: people02,
   },
   {
     id: "feedback-3",
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
+    content:"Cultivamos la confianza. Con años de experiencia y un historial comprobado, nuestro aserradero es tu socio confiable. Desde el primer contacto hasta la entrega, puedes confiar en nosotros para proporcionar productos de calidad y cumplir con tus expectativas.",
+    name: "3.Confianza",
     title: "Founder & Leader",
     img: people03,
   },
@@ -73,82 +70,55 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Años de experiencia",
+    value: "30+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Clientes",
+    value: "150+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Cortes de madera",
+    value: "+10k",
   },
 ];
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Contacto",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "ventas@aserraderosanvicente.com",
+        link: "",
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "info@aserraderosanvicente.com",
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
+        name: " ",
       },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
+  
     ],
   },
   {
-    title: "Community",
+    title: "Redes",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        name: "Aserradero San Vicente ",
       },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
+ ,
     ],
   },
   {
-    title: "Partner",
+    title: "Ubicación",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Ruta 21 - Av.Gral Rojo 1521 ",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "I. Casanova",
       },
     ],
   },
@@ -158,23 +128,14 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/aserraderosanvicente/",
   },
   {
     id: "social-media-2",
     icon: facebook,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/aserradero.sanvicente.507/",
   },
-  {
-    id: "social-media-3",
-    icon: twitter,
-    link: "https://www.twitter.com/",
-  },
-  {
-    id: "social-media-4",
-    icon: linkedin,
-    link: "https://www.linkedin.com/",
-  },
+ 
 ];
 
 export const clients = [

@@ -1,0 +1,211 @@
+body{
+    font-family: sans-serif;
+    
+}
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.circular-slider {
+    height: 40em;
+    min-height: 20vh;
+    padding: 1em 2em 0 2em ;
+    color: rgb(0, 0, 0);
+    position: relative;
+    overflow:hidden ;
+    text-align: center;
+}
+.text:not(:nth-child(3)) {
+    display: none;
+}
+
+.text h1 {
+    font-size: 3em;
+    margin: 0.5 0;
+}
+
+.text p {
+    max-width: 550px;
+    line-height: 30px;
+    margin: 0 auto ;
+
+}
+
+.slider {
+    position: absolute;
+    bottom: -40vw;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.slider .img {
+    width: 120vh;
+    height: 120vh;
+    max-width: 400px;
+    max-height: 600px;
+    background-image: url(../assets/wood1.png);
+    background-position:initial;
+    background-repeat: no-repeat;
+    background-size:contain;
+    transition: 300ms;
+
+}
+
+.indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vh;
+    height: 150vh;
+    max-width: 700px;
+    max-height: 700px;
+    border: 5px #656565 solid;
+    border-radius: 50%;
+    transition: 300ms;
+
+
+}
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: -0.65em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: #246a2f;
+    border-radius: 50%;
+}
+
+
+
+.another-indicator::before {
+    content: "";
+    position: absolute;
+    top: 2.7em;
+    left: -11%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: #246a2f;
+    border-radius: 50%;
+}
+
+.fourth-indicator::before {
+    content: "";
+    position: absolute;
+    top: 13em;
+    right: -38.7%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: #246a2f;
+    border-radius: 50%;
+}
+
+
+.fifth-indicator::before {
+    content: "";
+    position: absolute;
+    top: 13em;
+    left: -34.4%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: #246a2f;
+    border-radius: 50%;
+}
+
+
+.third-indicator::before {
+    content: "";
+    position: absolute;
+    top: 2.7em;
+    right: -15%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: #246a2f;
+    border-radius: 50%;
+}
+
+.text-gradient {
+    background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      rgb(108, 174, 118) 0.89%,
+      #678b4e 17.23%,
+      #54a448 42.04%,
+      #356c44 55.12%,
+      #317e3b 71.54%,
+      #25783b 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+
+
+.menu, .menu div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130vh;
+    height: 130vh;
+    max-width: 750px;
+    max-height: 750px;
+    border-radius: 50%;
+  
+   
+
+}
+
+
+
+.menu span {
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: 200ms;
+    text-align: center;
+ 
+}
+
+
+.menu span:hover {
+    color: #555252;
+}
+
+.menu div:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+    
+}
+
+.menu div:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+.menu div:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-75deg);
+}
+
+.menu div:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(75deg);
+}
+
+
+@media screen and (min-width:800px) {
+    .slider{
+        bottom: -22em;
+    }
+}

@@ -17,16 +17,62 @@
 * {
   scroll-behavior: smooth;
 }
+.gradient-brown {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #faf3de 0.89%,
+    rgb(253, 204, 107) 17.23%,
+    rgb(248, 167, 67) 42.04%,
+    #ebdb7d 55.12%,
+    rgb(248, 240, 130) 71.54%,
+    #cf8e33 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2em; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;  /* Adjust this value to control the distance from the bottom */
+  left: 20px;    /* Adjust this value to control the distance from the left */
+  z-index: 999;  /* Ensure the button appears above other content */
+}
+
+.whatsapp-button img {
+  width: 50px;   /* Adjust the width of the icon */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+.bg-hero {
+  background-image: url("./src/assets/hero.png")
+
+}
+
+.bg-values {
+  background-image: url("./src/assets/bg-values.png");
+
+}
+
+.watermark {
+  position: absolute;
+  top: -32px; /* Adjust the positioning of the watermark */
+  right: 10px; /* Adjust the positioning of the watermark */
+  opacity: 0.3; /* Adjust the opacity of the watermark */
+ 
+}
+
 
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    rgb(152, 181, 156) 0.89%,
+    #678b4e 17.23%,
+    #54a448 42.04%,
+    #356c44 55.12%,
+    #317e3b 71.54%,
+    #25783b 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -124,15 +170,21 @@
   background: var(--black-gradient);
 }
 
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+
+
+/* Green Gradient */
+.green__gradient {
+  background: linear-gradient(180deg, rgba(173, 255, 189, 0) 0%, #1c8b50 100%);
   filter: blur(123px);
 }
 
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
+/* Yellow Gradient */
+.yellow__gradient {
+  background: linear-gradient(180deg, rgba(255, 241, 173, 0) 0%, #d5c039 100%);
+  filter: blur(123px);
 }
+
+
 
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
