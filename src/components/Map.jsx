@@ -22,11 +22,10 @@ const Mapa = (props) => {
       new props.google.maps.Marker({
         position: ubicacion,
         map: mapa,
-        title: 'Mi Ubicación', // Texto del marcador
+        title: 'Mi Ubicación', 
       });
     };
 
-    // Llamar a la función de inicialización del mapa
     inicializarMapa();
   }, [props.google.maps]);
 
