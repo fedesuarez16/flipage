@@ -1,36 +1,43 @@
-// Map.jsx
+
+
 import React, { useEffect } from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-const Mapa = (props) => {
+const Map = () => {
   useEffect(() => {
-    // Función para inicializar el mapa
-    const inicializarMapa = () => {
-      // Coordenadas de la ubicación
-      const ubicacion = { lat: -34.74155951356323, lng: -58.56801410453702 }; // Reemplaza con tus propias coordenadas
+    // Inicializa el mapa después de que el componente se monta
+    initMap();
+  }, []);
 
-      // Opciones del mapa
-      const opcionesMapa = {
-        center: ubicacion,
+  const initMap = () => {
+    // Reemplaza 'TU_CLAVE_DE_API' con tu clave de API de Google Maps
+    const apiKey = 'AIzaSyBq1WSgEnqOohptNqZY6CZYA6WiRVV7FD4';
+
+    // Carga la API de Google Maps
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+    script.defer = true;
+    script.async = true;
+
+    // Agrega el script al final del cuerpo del documento
+    document.body.appendChild(script);
+
+    // Inicializa el mapa una vez que la API se haya cargado
+    window.initMap = () => {
+      const map = new window.google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.74155951356323, lng: -58.56801410453702 }, // Reemplaza con tus coordenadas
         zoom: 15,
-      };
+      });
 
-      const mapa = new props.google.maps.Map(document.getElementById('mapa'), opcionesMapa);
-
-      // Agregar un marcador
-      new props.google.maps.Marker({
-        position: ubicacion,
-        map: mapa,
-        title: 'Mi Ubicación', 
+      // Puedes agregar marcadores, polígonos, etc., según tus necesidades
+      new window.google.maps.Marker({
+        position: { lat: -34.74155951356323, lng: -58.56801410453702 },
+        map: map,
+        title: 'Mi Ubicación',
       });
     };
+  };
 
-    inicializarMapa();
-  }, [props.google.maps]);
-
-  return <div id="mapa" style={{ width: '100%', height: '400px' }}></div>;
+  return <div id="map" style={{ width: '100%', height: '400px' }}></div>;
 };
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBq1WSgEnqOohptNqZY6CZYA6WiRVV7FD4', // Reemplaza con tu propia clave
-})(Mapa);
+export default Map;
