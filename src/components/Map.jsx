@@ -15,7 +15,6 @@ const Mapa = (props) => {
         zoom: 15,
       };
 
-      // Crear el mapa
       const mapa = new props.google.maps.Map(document.getElementById('mapa'), opcionesMapa);
 
       // Agregar un marcador
