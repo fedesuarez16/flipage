@@ -1,36 +1,45 @@
-const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
 const cors = require('cors')();
 
-const gmailEmail = 'coflipweb@gmail.com';
-const gmailPassword = 'fedesss10';
-
 const transporter = nodemailer.createTransport({
-  service: 'privateemail.com',
-  port: 587, // Update with the correct SMTP port (usually 587 or 465)
-  secure: false,
+  service: 'Gmail',
   auth: {
-    user: "ventasmayorista@aserraderosanvicente.com",
-    pass: "boaa-azyn-kkzf-zhwo",
+    user: 'mario.ventas.sv@gmail.com',
+    pass: 'dfke sqrn wyvr xkdf',
   },
+  port: 465,
+  secure: true,
 });
 
-exports.sendEmail = functions.https.onRequest((req, res) => {
+const sendReportMail = (mailOptions) => {
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(info);
+      }
+    });
+  });
+};
+
+exports.reportMail = functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
     const { name, email, message } = req.body;
 
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'ventasmayorista@aserraderosanvicente.com',
+      to: 'ventas@aserraderosanvicente.com',
       subject: 'New Contact Form Submission',
       text: message,
     };
 
     try {
-      await transporter.sendMail(mailOptions);
+      await sendReportMail(mailOptions);
       return res.status(200).send('Email sent successfully');
     } catch (error) {
       console.error('Error sending email:', error);
+      console.error('Detailed error:', error.response?.data || error.message || error);
       return res.status(500).send(error.toString());
     }
   });

@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://us-central1-portfolio-dfdd3.cloudfunctions.net/sendEmail', formData);
+      await axios.post('/api/sendEmail', formData);
       alert('Email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
