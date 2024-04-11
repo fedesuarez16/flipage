@@ -6,6 +6,7 @@ import Blanda from './components/Blanda';
 import Semidura from './components/Semidura';
 import Dura from './components/Dura';
 import Techos from './components/Techos';
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => (
   <Router>
