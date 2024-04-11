@@ -21,7 +21,12 @@ export default async function handler(req, res) {
     from: `"${name}" <${email}>`,
     to: 'ventas@aserraderosanvicente.com',
     subject: 'Nuevo Formulario de Contacto',
-    text: message,
+    html: `
+    <p>Nombre: ${name}</p>
+
+    <p>Consulta: ${message}</p>
+
+    <p>Correo: ${email}</p>`
   };
 
   try {
