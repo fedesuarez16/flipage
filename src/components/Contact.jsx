@@ -65,7 +65,7 @@ const Contact = () => {
             />
             <input
               name="email"
-              type="text"
+              type="email"
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-zinc-300 focus:border-accent transition-all"
               placeholder="Tu email"
               value={formData.email}
