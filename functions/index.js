@@ -31,7 +31,7 @@ exports.reportMail = functions.https.onRequest((req, res) => {
       from: `"${name}" <${email}>`,
       to: 'ventas@aserraderosanvicente.com',
       subject: 'New Contact Form Submission',
-      text: message,
+      text: message, 
     };
 
     try {
